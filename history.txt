@@ -1,0 +1,16 @@
+  987  cd Desktop
+  988  ffmpeg -i Registrazione\ schermo\ 2025-08-01\ alle\ 11.52.54.mov Registrazione\ schermo\ 2025-08-01\ alle\ 11.mp4
+  989  ffmpeg -i Registrazione\ schermo\ 2025-08-01\ alle\ 11.52.54.mov Registrazione\ schermo\ 2025-08-01\ alle\ 11.gif
+  990  ll
+  991  ls -l
+  992  cd ..
+  993  venv3d/bin/activate
+  994  source venv3d/bin/activate
+  995  pwd
+  996  cd farec3d
+  997  python cattura-volto.py
+  998  python match_volrti_3d.py
+  999  deactivate
+ 1000  exit
+ 1001  cd Desktop
+ 1002  ffmpeg -i Antonio.mov Antonio.mp4
