@@ -1,0 +1,260 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║  ✅ COMPARATORE BATCH AVANZATO - AGGIORNATO!                    ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🎉 IL COMPARATORE BATCH AVANZATO ORA HA IL REPORT HTML UNIFICATO!
+
+═══════════════════════════════════════════════════════════════════
+
+📦 FILE AGGIORNATO
+
+comparatore_batch_avanzato.py
+→ Ora genera UN SOLO report HTML con tutte le comparazioni
+→ Include pulsanti per ordinare dinamicamente
+
+═══════════════════════════════════════════════════════════════════
+
+🌟 MODIFICHE APPORTATE
+
+PRIMA:
+  ❌ Generava UN report HTML per ogni comparazione
+  ❌ 150 comparazioni = 750 file (150 HTML + 600 immagini)
+  ❌ Dovevi aprire 150 file HTML separati
+  ❌ Nessun ordinamento
+  ❌ Nessun filtro
+
+ORA:
+  ✅ Genera UN SOLO report HTML unificato
+  ✅ 150 comparazioni = 301 file (1 HTML + 300 immagini)
+  ✅ Apri 1 solo file HTML con tutto!
+  ✅ Ordinamento dinamico con pulsanti
+  ✅ Filtri rapidi (Alta/Media/Bassa)
+  ✅ Ricerca integrata
+  ✅ Modal popup per immagini
+
+═══════════════════════════════════════════════════════════════════
+
+📊 PULSANTI DI ORDINAMENTO NEL REPORT HTML
+
+Il report HTML ora include questi pulsanti:
+
+┌──────────────────────────────────────────────────────────┐
+│ [📊 Ordina per Compatibilità ↓]                         │
+│ [📁 Ordina per File 1 (A-Z)]                            │
+│ [📁 Ordina per File 2 (A-Z)]                            │
+└──────────────────────────────────────────────────────────┘
+
+ORDINAMENTO PER TARGET (File 2):
+  Click su "📁 Ordina per File 2 (A-Z)"
+  → Raggruppa tutte le comparazioni per file target
+  → Utile per vedere tutti i match di una foto specifica
+
+ORDINAMENTO PER COMPATIBILITÀ:
+  Click su "📊 Ordina per Compatibilità ↓"
+  → Mostra i match migliori in cima
+  → Vedi subito le corrispondenze più alte
+
+ORDINAMENTO PER FILE 1:
+  Click su "📁 Ordina per File 1 (A-Z)"
+  → Raggruppa per file della directory 1
+  → Utile per analizzare persona per persona
+
+═══════════════════════════════════════════════════════════════════
+
+🔍 ALTRE FUNZIONALITÀ DEL REPORT
+
+FILTRI RAPIDI:
+  🟢 Solo Alta (≥80%)
+  🟡 Solo Media (60-79%)
+  🔴 Solo Bassa (<60%)
+  📋 Mostra Tutti
+
+RICERCA:
+  Casella di ricerca in tempo reale
+  Cerca per nome file in entrambe le colonne
+
+VISUALIZZAZIONE IMMAGINI:
+  Click "👁️ Vedi" su ogni riga
+  Apre popup con immagini affiancate
+
+STATISTICHE:
+  Barra in alto con contatori:
+  • Totali
+  • Alta
+  • Media
+  • Bassa
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 COME USARE
+
+1. Avvio:
+   python comparatore_batch_avanzato.py
+
+2. Configura:
+   • Seleziona Directory 1
+   • Seleziona Directory 2
+   • ☑️ Genera Report HTML Unificato (già ON di default)
+   • Soglia minima % (default 0)
+
+3. Avvia:
+   • Click "🔍 Avvia Comparazione Batch"
+   • Aspetta completamento
+
+4. Visualizza Report:
+   • Click "📄 Apri Report HTML"
+   • Usa i pulsanti per ordinare come vuoi!
+
+═══════════════════════════════════════════════════════════════════
+
+💡 CASO D'USO: IDENTIFICAZIONE PERSONE
+
+Scenario:
+  Directory 1: 100 foto database persone
+  Directory 2: 20 foto da identificare
+
+Workflow nel report HTML:
+
+1. ORDINA PER FILE 2 (Target):
+   → Vedi tutte le comparazioni della foto1_target.jpg
+   → I migliori match sono in cima per ogni foto
+
+2. FILTRA SOLO ALTA:
+   → Vedi solo match con ≥80% compatibilità
+   → Identifica rapidamente le persone
+
+3. CERCA SPECIFICA PERSONA:
+   → Digita "mario" nella ricerca
+   → Vedi solo comparazioni con "mario"
+
+═══════════════════════════════════════════════════════════════════
+
+📁 FILE GENERATI
+
+reports_batch_unified/
+├── report_unificato_20250107_143045.html  ← IL REPORT!
+├── img1_20250107_143045_0.jpg
+├── img2_20250107_143045_0.jpg
+├── img1_20250107_143045_1.jpg
+├── img2_20250107_143045_1.jpg
+└── ... (2 immagini per comparazione)
+
+UN SOLO HTML DA APRIRE!
+
+═══════════════════════════════════════════════════════════════════
+
+🎨 INTERFACCIA REPORT HTML
+
+┌──────────────────────────────────────────────────────────┐
+│  📊 Report Unificato Comparazioni Biometriche           │
+│  Generato il: 07/11/2025 alle 14:30:45                  │
+├──────────────────────────────────────────────────────────┤
+│  STATISTICHE                                             │
+│  Totali: 150 │ Alta: 45 │ Media: 67 │ Bassa: 38       │
+├──────────────────────────────────────────────────────────┤
+│  CONTROLLI                                               │
+│  [📊 Ordina Comp ↓] [📁 File 1] [📁 File 2]            │
+│  [🟢 Alta] [🟡 Media] [🔴 Bassa] [📋 Tutti]            │
+│  [🔍 Cerca...]                                          │
+├──────────────────────────────────────────────────────────┤
+│  TABELLA                                                 │
+│  # │ File 1   │ File 2   │ Comp │ Dist │ Status │ Az  │
+│  1 │ pers1.jpg│ fot_a.jpg│ 87.4%│ 0.03 │ ALTA   │ 👁️  │
+│  2 │ pers1.jpg│ fot_b.jpg│ 72.1%│ 0.06 │ MEDIA  │ 👁️  │
+│  3 │ pers2.jpg│ fot_a.jpg│ 45.7%│ 0.11 │ BASSA  │ 👁️  │
+└──────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+
+✨ VANTAGGI RISPETTO A PRIMA
+
+ORGANIZZAZIONE:
+  • 1 file invece di 150
+  • Più facile da condividere
+  • Più facile da archiviare
+
+NAVIGAZIONE:
+  • Ordina con un click
+  • Filtra rapidamente
+  • Cerca istantaneamente
+
+ANALISI:
+  • Vedi overview completa
+  • Identifica pattern facilmente
+  • Trova match specifici velocemente
+
+PRESTAZIONI:
+  • Carica più veloce (1 HTML vs 150)
+  • Consuma meno spazio disco
+  • Browser più reattivo
+
+═══════════════════════════════════════════════════════════════════
+
+🆚 CONFRONTO VERSIONI
+
+                      PRIMA    ORA
+Report HTML           Multipli Unificato
+File generati         750      301
+Ordinamento           No       Sì
+Filtri                No       Sì
+Ricerca               No       Sì
+Modal immagini        No       Sì
+Statistiche           No       Sì
+
+═══════════════════════════════════════════════════════════════════
+
+💪 FUNZIONALITÀ COMPLETE
+
+✅ Comparazione batch automatica
+✅ Report HTML unificato
+✅ Ordinamento per compatibilità
+✅ Ordinamento per file 1 (source)
+✅ Ordinamento per file 2 (target)
+✅ Filtri rapidi (Alta/Media/Bassa)
+✅ Ricerca in tempo reale
+✅ Modal popup immagini
+✅ Statistiche visive
+✅ Esportazione CSV
+✅ Progress bar
+✅ Pulsante Stop
+✅ Soglia minima configurabile
+✅ Tabella colorata nella GUI
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 PRONTO ALL'USO!
+
+python comparatore_batch_avanzato.py
+
+1. Seleziona 2 directory
+2. Avvia comparazione
+3. Apri il report HTML
+4. Usa i pulsanti per ordinare come vuoi!
+
+═══════════════════════════════════════════════════════════════════
+
+📚 NOTA BENE
+
+Il comparatore_super_avanzato.py include ANCHE:
+  • Preview live immagini nella GUI (2 sec)
+  • Interfaccia a 2 colonne
+  • Visualizzazione comparazione corrente
+
+Se NON ti serve la preview live, usa:
+  → comparatore_batch_avanzato.py (questo)
+
+Se VUOI la preview live, usa:
+  → comparatore_super_avanzato.py
+
+Entrambi hanno il report HTML unificato! ✅
+
+═══════════════════════════════════════════════════════════════════
+
+Buon lavoro! 🚀📊
+
+Ora il comparatore_batch_avanzato.py genera UN SOLO report HTML
+con ordinamento, filtri e ricerca integrati!
+
+═══════════════════════════════════════════════════════════════════

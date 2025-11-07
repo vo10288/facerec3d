@@ -1,0 +1,29 @@
+
+     active environment : py3.9
+    active env location : /Users/CFDA_BOLOGNA/opt/anaconda3/envs/py3.9
+            shell level : 2
+       user config file : /Users/CFDA_BOLOGNA/.condarc
+ populated config files : 
+          conda version : 22.9.0
+    conda-build version : 3.22.0
+         python version : 3.9.13.final.0
+       virtual packages : __osx=10.16=0
+                          __unix=0=0
+                          __archspec=1=x86_64
+       base environment : /Users/CFDA_BOLOGNA/opt/anaconda3  (writable)
+      conda av data dir : /Users/CFDA_BOLOGNA/opt/anaconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/osx-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/osx-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /Users/CFDA_BOLOGNA/opt/anaconda3/pkgs
+                          /Users/CFDA_BOLOGNA/.conda/pkgs
+       envs directories : /Users/CFDA_BOLOGNA/opt/anaconda3/envs
+                          /Users/CFDA_BOLOGNA/.conda/envs
+               platform : osx-64
+             user-agent : conda/22.9.0 requests/2.32.3 CPython/3.9.13 Darwin/22.6.0 OSX/10.16
+                UID:GID : 502:20
+             netrc file : None
+           offline mode : False
+

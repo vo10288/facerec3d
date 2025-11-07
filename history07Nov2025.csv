@@ -1,0 +1,16 @@
+ 1059  python3.10 -m tkinter
+ 1060  conda activate py3.9
+ 1061  python -m tkinter
+ 1062  python comparatore_volti_gui.py
+ 1063  pip install mediapipe
+ 1064  conda install mediapipe
+ 1065  pip install opencv-python mediapipe pillow numpy
+ 1066  pip install mediapipe
+ 1067  uname -m
+ 1068  sw_vers
+ 1069  python --version
+ 1070  pip install --upgrade pip setuptools wheel
+ 1071  80.9.0
+ 1072  pip cache purge
+ 1073  pip install mediapipe==0.10.9
+ 1074  python -c "import mediapipe; print('MediaPipe installato:', mediapipe.__version__)"

@@ -1,0 +1,347 @@
+# 📸 Anteprima Interfaccia - Comparatore Biometrico Volti 3D
+
+## 🖥️ Layout Interfaccia Grafica
+
+```
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║              🔍 COMPARATORE BIOMETRICO VOLTI 3D                          ║
+║                                                                           ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║                                                                           ║
+║   ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────┐  ║
+║   │ 📁 Carica    │  │ 📁 Carica    │  │ 🔍 Compara   │  │ 🔄 Reset │  ║
+║   │ Immagine 1   │  │ Immagine 2   │  │    Volti     │  │          │  ║
+║   └──────────────┘  └──────────────┘  └──────────────┘  └──────────┘  ║
+║                                                                           ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║                                                                           ║
+║  ┌────────────────────────────────┐   ┌────────────────────────────────┐║
+║  │        IMMAGINE 1              │   │        IMMAGINE 2              │║
+║  ├────────────────────────────────┤   ├────────────────────────────────┤║
+║  │                                │   │                                │║
+║  │  ┌──────────┐   ┌──────────┐  │   │  ┌──────────┐   ┌──────────┐  │║
+║  │  │          │   │          │  │   │  │          │   │          │  │║
+║  │  │ Originale│   │ Landmarks│  │   │  │ Originale│   │ Landmarks│  │║
+║  │  │          │   │  ●●●●●   │  │   │  │          │   │  ●●●●●   │  │║
+║  │  │   😊     │   │ ●●●😊●●  │  │   │  │   😊     │   │ ●●●😊●●  │  │║
+║  │  │          │   │  ●●●●●   │  │   │  │          │   │  ●●●●●   │  │║
+║  │  └──────────┘   └──────────┘  │   │  └──────────┘   └──────────┘  │║
+║  │                                │   │                                │║
+║  │   Originale    Landmarks 3D    │   │   Originale    Landmarks 3D    │║
+║  │                                │   │                                │║
+║  │  Hash SHA256:                  │   │  Hash SHA256:                  │║
+║  │  a1b2c3d4e5f6789...           │   │  1234567890abcd...            │║
+║  └────────────────────────────────┘   └────────────────────────────────┘║
+║                                                                           ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║                                                                           ║
+║              ╔═══════════════════════════════════════╗                   ║
+║              ║                                       ║                   ║
+║              ║  Compatibilità Biometrica: 85.67%    ║                   ║
+║              ║                                       ║                   ║
+║              ║      🟢 ALTA COMPATIBILITÀ           ║                   ║
+║              ║                                       ║                   ║
+║              ║  Distanza media landmarks: 0.0286    ║                   ║
+║              ╚═══════════════════════════════════════╝                   ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+```
+
+## 🎨 Schema Colori
+
+### Sfondo
+- **Principale**: Grigio scuro (`#2c3e50`)
+- **Sezioni**: Grigio medio (`#34495e`)
+- **Testo**: Bianco/Grigio chiaro (`#ecf0f1`, `#bdc3c7`)
+
+### Pulsanti
+- **Carica**: Blu (`#3498db`)
+- **Compara**: Verde (`#27ae60`)
+- **Reset**: Rosso (`#e74c3c`)
+- **Hover**: Effetto luminoso
+
+### Risultati
+- **Alta compatibilità**: Verde (`#27ae60`) ≥ 80%
+- **Media compatibilità**: Arancione (`#f39c12`) 60-79%
+- **Bassa compatibilità**: Rosso (`#e74c3c`) < 60%
+
+## 📊 Sezioni dell'Interfaccia
+
+### 1. Header (Top)
+```
+┌────────────────────────────────────────┐
+│  🔍 COMPARATORE BIOMETRICO VOLTI 3D    │
+│         (Titolo grande e centrato)     │
+└────────────────────────────────────────┘
+```
+
+### 2. Barra Pulsanti
+```
+┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────┐
+│ 📁 Carica│  │ 📁 Carica│  │ 🔍 Compara│  │ 🔄   │
+│  Img 1   │  │  Img 2   │  │   Volti   │  │ Reset│
+└──────────┘  └──────────┘  └──────────┘  └──────┘
+   (Blu)         (Blu)         (Verde)      (Rosso)
+```
+
+### 3. Area Immagini (Side by Side)
+
+#### Colonna Sinistra - Immagine 1
+```
+┌─────────────────────────────┐
+│      IMMAGINE 1             │
+├─────────────────────────────┤
+│  ┌─────┐      ┌─────┐      │
+│  │ Img │      │ Img │      │
+│  │ Orig│      │ +468│      │
+│  │     │      │ pts │      │
+│  └─────┘      └─────┘      │
+│   Originale   Landmarks    │
+│                             │
+│ Hash: a1b2c3...            │
+└─────────────────────────────┘
+```
+
+#### Colonna Destra - Immagine 2
+```
+┌─────────────────────────────┐
+│      IMMAGINE 2             │
+├─────────────────────────────┤
+│  ┌─────┐      ┌─────┐      │
+│  │ Img │      │ Img │      │
+│  │ Orig│      │ +468│      │
+│  │     │      │ pts │      │
+│  └─────┘      └─────┘      │
+│   Originale   Landmarks    │
+│                             │
+│ Hash: 1234567...           │
+└─────────────────────────────┘
+```
+
+### 4. Pannello Risultati (Bottom)
+```
+╔═════════════════════════════════════════╗
+║                                         ║
+║  Compatibilità Biometrica: XX.XX%      ║
+║                                         ║
+║         🟢/🟡/🔴 STATO                  ║
+║                                         ║
+║  Distanza media landmarks: 0.XXXX      ║
+║                                         ║
+╚═════════════════════════════════════════╝
+```
+
+## 🔄 Flusso di Utilizzo
+
+### Step 1: Stato Iniziale
+```
+┌────────────────────────────────────┐
+│  Pulsanti: Carica Img 1, Carica 2 │
+│  Compara: [DISABILITATO]           │
+│  Immagini: [VUOTE]                 │
+│  Status: "Carica due immagini..."  │
+└────────────────────────────────────┘
+```
+
+### Step 2: Prima Immagine Caricata
+```
+┌────────────────────────────────────┐
+│  Immagine 1: ✅ MOSTRATA           │
+│  Immagine 2: ⬜ VUOTA              │
+│  Compara: [DISABILITATO]           │
+│  Status: "Carica la seconda img"   │
+└────────────────────────────────────┘
+```
+
+### Step 3: Entrambe Caricate
+```
+┌────────────────────────────────────┐
+│  Immagine 1: ✅ MOSTRATA           │
+│  Immagine 2: ✅ MOSTRATA           │
+│  Compara: [ABILITATO - VERDE]      │
+│  Status: "Pronto per comparare"    │
+└────────────────────────────────────┘
+```
+
+### Step 4: Comparazione Eseguita
+```
+┌────────────────────────────────────┐
+│  Risultato: 85.67%                 │
+│  Colore: 🟢 VERDE                  │
+│  Status: "ALTA COMPATIBILITÀ"      │
+│  Report: ✅ Salvato                │
+└────────────────────────────────────┘
+```
+
+## 📱 Responsive Layout
+
+### Dimensioni Finestra
+- **Larghezza**: 1400px
+- **Altezza**: 900px
+- **Ridimensionabile**: Sì
+- **Minimo**: 1200x700px consigliato
+
+### Adattamento Immagini
+```
+Immagine caricata:  2000x1500px
+                      ↓
+Visualizzata come:   300x225px
+                      ↓
+Mantiene proporzioni: ✅
+```
+
+## 🎭 Stati Visuali
+
+### Pulsante "Compara Volti"
+
+**Disabilitato** (grigio)
+```
+┌────────────────┐
+│  🔍 Compara    │  [Grigio - Non cliccabile]
+│     Volti      │
+└────────────────┘
+```
+
+**Abilitato** (verde brillante)
+```
+┌────────────────┐
+│  🔍 Compara    │  [Verde - Cliccabile]
+│     Volti      │  [Hover: più luminoso]
+└────────────────┘
+```
+
+### Pannello Risultati
+
+**Prima della comparazione**
+```
+╔════════════════════════════════╗
+║  Compatibilità: -- %           ║
+║  [Colore neutro]               ║
+╚════════════════════════════════╝
+```
+
+**Alta compatibilità (≥80%)**
+```
+╔════════════════════════════════╗
+║  Compatibilità: 85.67% 🟢      ║
+║  ALTA COMPATIBILITÀ            ║
+║  [Sfondo verde chiaro]         ║
+╚════════════════════════════════╝
+```
+
+**Media compatibilità (60-79%)**
+```
+╔════════════════════════════════╗
+║  Compatibilità: 72.34% 🟡      ║
+║  COMPATIBILITÀ MEDIA           ║
+║  [Sfondo arancione chiaro]     ║
+╚════════════════════════════════╝
+```
+
+**Bassa compatibilità (<60%)**
+```
+╔════════════════════════════════╗
+║  Compatibilità: 45.12% 🔴      ║
+║  BASSA COMPATIBILITÀ           ║
+║  [Sfondo rosso chiaro]         ║
+╚════════════════════════════════╝
+```
+
+## 🖼️ Visualizzazione Landmarks
+
+### Punti Disegnati
+```
+Landmarks Tesselation (verde):
+  ●―●―●―●―●
+  |\ | /| /|
+  ●―●―●―●―●    468 punti totali
+  |/ | \| \|
+  ●―●―●―●―●
+
+Contorni (rosso):
+  ◆═══◆═══◆    Contorni facciali
+  ║   ║   ║    più spessi
+  ◆═══◆═══◆
+```
+
+## 💡 Indicatori Visivi
+
+### Hash Display
+```
+┌───────────────────────────────────────┐
+│ Hash SHA256:                          │
+│ a1b2c3d4e5f678901234567890abcdef...  │
+│ [Font monospazio, grigio chiaro]      │
+└───────────────────────────────────────┘
+```
+
+### Messaggio di Status
+```
+┌─────────────────────────────────────┐
+│ "Carica due immagini per iniziare"  │ [Iniziale]
+│ "Pronto per la comparazione"        │ [Ready]
+│ "ALTA COMPATIBILITÀ - Dist: 0.028"  │ [Risultato]
+└─────────────────────────────────────┘
+```
+
+## 🎨 Tema Colori Completo
+
+```
+Primari:
+  #2c3e50  - Sfondo principale (grigio scuro)
+  #34495e  - Pannelli (grigio medio)
+  #ecf0f1  - Testo principale (bianco/grigio)
+
+Pulsanti:
+  #3498db  - Blu (Carica)
+  #27ae60  - Verde (Compara)
+  #e74c3c  - Rosso (Reset)
+
+Risultati:
+  #28a745  - Verde (Alta)
+  #ffc107  - Arancione (Media)
+  #dc3545  - Rosso (Bassa)
+
+Accenti:
+  #667eea  - Viola (Header)
+  #764ba2  - Viola scuro (Sfumature)
+  #95a5a6  - Grigio tenue (Info)
+```
+
+## 📐 Dimensioni Componenti
+
+```
+Titolo:           24pt, Bold
+Pulsanti:         12pt, Bold, 20px padding
+Immagini:         300px altezza max
+Hash:             9pt, Monospazio
+Risultato:        18pt, Bold
+Status:           11pt, Regular
+```
+
+## ✨ Effetti e Animazioni
+
+### Hover sui Pulsanti
+```
+Stato normale:    opacity: 1.0
+Hover:           opacity: 0.9, cursor: pointer
+Click:           opacity: 0.8
+```
+
+### Transizioni
+```
+Caricamento immagine:  Fade-in 0.3s
+Risultato:            Slide-up 0.5s
+Hover:               Transform 0.3s
+```
+
+---
+
+**Nota**: Questa è una rappresentazione testuale dell'interfaccia.  
+L'applicazione reale ha grafica completa con immagini, colori e interazioni.
+
+🚀 Avvia l'app per vedere l'interfaccia completa!
+```bash
+python comparatore_volti_gui.py
+```
